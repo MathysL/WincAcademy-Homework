@@ -1,0 +1,27 @@
+body {
+    color: rgb(124, 8, 8);
+}
+
+.black-border {
+    border: 5px solid black;
+}
+
+.gold-b-double {
+    border: 5px double gold;
+}
+
+.blue-dotted {
+    border: 25px dotted blue;
+}
+
+#green-background {
+    background-color: green;
+}
+
+#blue-background {
+    background-color: rgb(45, 0, 128);
+}
+
+#green-background {
+    background-color: green;
+}
