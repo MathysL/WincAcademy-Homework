@@ -1,21 +1,13 @@
-body {
-    color: rgb(124, 8, 8);
+#Thema {
+    background-color: lightblue;
+    color: black;
+    padding: 1%;
+    text-align: center;
+    margin: 1%;
 }
 
-.black-border {
-    border: 5px solid black;
-}
-
-.gold-b-double {
-    border: 5px double gold;
-}
-
-.blue-dotted {
-    border: 25px dotted blue;
-}
-
-#green-background {
-    background-color: green;
+#grey-background {
+    background-color: rgb(228, 231, 228);
 }
 
 #blue-background {
@@ -24,4 +16,125 @@ body {
 
 #green-background {
     background-color: green;
+}
+
+
+/* Style all elements with the class name "onderdeel"  or id Thema */
+
+.onderdeel {
+    background-color: tomato;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+}
+
+.black-border {
+    border: 5px solid black;
+    color: white;
+    padding: 10px;
+}
+
+.gold-b-double {
+    border: 5px double gold;
+    color: rgb(22, 21, 21);
+    padding: 5px;
+}
+
+.blue-dotted {
+    border: 25px dotted blue;
+    color: rgb(22, 21, 21);
+    padding: 5px;
+}
+
+
+/* H */
+
+body {
+    color: rgb(124, 8, 8);
+    background-color: rgb(226, 211, 241);
+    border: 2px solid powderblue;
+    padding: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+paragraph {
+    color: rgb(54, 2, 2);
+    background-color: rgb(219, 192, 247);
+    border: .black-border;
+    padding: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: rgb(54, 2, 2);
+    background-color: rgb(216, 51, 51);
+    border: 500 solid blue;
+    padding: 1px;
+    text-size-adjust: 10%;
+}
+
+p {
+    color: rgb(54, 2, 2);
+    background-color: rgb(216, 51, 51);
+    border: 2px solid blue;
+    padding: 1px;
+}
+
+li {
+    border: 2px dotted Violet;
+    color: rgb(124, 8, 8);
+}
+
+ul {
+    border: 2px solid rgb(117, 5, 117);
+    color: rgb(124, 8, 8);
+}
+
+smiley {
+    padding: 1%;
+    text-align: center;
+    size: 100%;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+me {
+    border: 2px solid powderblue;
+    color: rgb(124, 8, 8);
+    text-align: center;
+    size: 100%;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+main {
+    border: 1% solid rgb(221, 243, 96);
+    color: rgb(124, 8, 8);
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav {
+    list-style-type: none;
+    margin-right: 50%;
+    text-align: center;
+}
+
+header {
+    border: 2px solid rgb(235, 138, 58);
+    color: rgb(163, 11, 11);
+    margin-right: auto;
+}
+
+footer {
+    border: 2px solid Violet;
+    color: rgb(124, 8, 8);
+    margin-right: auto;
 }
