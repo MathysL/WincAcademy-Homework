@@ -1,0 +1,44 @@
+﻿        body {
+        justify-self: auto;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-grow: auto;
+        width: 300px;
+        flex-direction: row;
+        background-color: DodgerBlue;
+    }
+    
+    .flex-container>div {
+        background-color: #fff;
+        border: 1px auto rgb(136, 63, 63);
+        width: 300px;
+        margin: 0px;
+        text-align: center;
+        line-height: auto;
+        font-size: 14px;
+    }
+    
+    .blogpost {
+        width: 300px;
+        border: 1px solid black;
+    }
+    
+    @media (max-width: 800px) {
+        .flex-container {
+            display: flex;
+            flex-grow: auto;
+            width: 300px;
+            flex-direction: column;
+            background-color: DodgerBlue;
+        }
+        .flex-container>div {
+            background-color: #fff;
+            border: 1px auto rgb(136, 63, 63);
+            width: 390px;
+            margin: 10px;
+            text-align: center;
+            line-height: auto;
+            font-size: 14px;
+        }
