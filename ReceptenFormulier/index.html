@@ -1,46 +1,93 @@
-<<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-<nav>
-<a href=https://github.com/MathysL/WincAcademy-Homework/blob/FSD_home/ReceptenFormulier/index.html>Index</a>
-
-<a href=https://github.com/MathysL/WincAcademy-Homework/blob/FSD_home/ReceptenFormulier/receptenPagina.html>Recepten uploaden</a>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Index pagina Receptenpagina</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
+    <title>kook-boek</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-    <header>Kies uit de lijst met recepten, die geupload zijn:</header>
-    <div id="result">
-      print(result)
-      <script src="" async defer>
-        // Check browser support
-        if (typeof Storage !== "undefined") {
-          // Store
-          localStorage.setItem("recepten", "recept nr1");
-          // Retrieve
-          document.getElementById("result").innerHTML = localStorage.getItem(
-            "recepten"
-          );
-        } else {
-          document.getElementById("result").innerHTML =
-            "Sorry, your browser does not support Web Storage...";
-        }
-      </script>
-    </div>
+    <header><h1>Stuur je recept op:</h1></header>
+    <main>
+      <form name="contact" method="POST" data-netlify="true">
+        <!-- <form action="results.html" method="GET" enctype="multipart/form-data"> -->
+        <div>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" name="phone" id="phone" />
+        </div>
+        <div>
+          <label for="age">Age</label>
+          <input type="number" name="age" id="age" min="1" max="200" step="5" />
+        </div>
+        <div>
+          <label for="date">Birthdate</label>
+          <input type="date" name="date" id="date" min="2019-06-10" />
+        </div>
+        <hr />
+        <div>
+          Gender
+          <div>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male" />
+          </div>
+          <div>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female" />
+          </div>
+        </div>
+        <hr />
+        <div>
+          Favorite Cuisine
+          <div>
+            <label for="italian">Italian</label>
+            <input type="checkbox" name="italian" id="italian" />
+          </div>
+          <div>
+            <label for="french">French</label>
+            <input type="checkbox" name="french" id="french" />
+          </div>
+          <div>
+            <label for="spanish">Spanish</label>
+            <input type="checkbox" name="spanish" id="spanish" />
+          </div>
+          <div>
+            <label for="arabic">Arabic</label>
+            <input type="checkbox" name="arabic" id="arabic" />
+          </div>
+        </div>
+        <hr />
+
+        <div>
+          <label for="color">Favoriete kleur van je schort</label>
+          <input type="color" name="color" id="color" />
+        </div>
+
+        <hr />
+
+        <div>
+          <label for="bio">Bio</label>
+          <textarea id="bio" name="bio"></textarea>
+        </div>
+        <input type="hidden" name="hidden" value="hi" />
+        <div>
+          <label for="file">File</label>
+          <input id="file" type="file" name="file" />
+        </div>
+
+        <div>
+          <label for="url">URL</label>
+          <input type="url" name="url" id="url" />
+        </div>
+
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
   </body>
 </html>
