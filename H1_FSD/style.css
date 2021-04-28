@@ -1,0 +1,176 @@
+#Thema {
+    background-color: lightblue;
+    color: rgb(160, 134, 134);
+}
+
+#grey-background {
+    background-color: rgb(228, 231, 228);
+    color: black;
+}
+
+#blue-background {
+    background-color: rgb(22, 22, 145);
+}
+
+#green-background {
+    background-color: green;
+}
+
+.blogpost {
+    display: flex;
+    flex-grow: auto;
+    width: 300px;
+    flex-direction: column;
+    background-color: DodgerBlue;
+}
+
+.blogpost>div {
+    background-color: #fff;
+    border: 1px auto rgb(136, 63, 63);
+    width: 390px;
+    margin: 10px;
+    text-align: center;
+    line-height: auto;
+    font-size: 14px;
+}
+
+
+/* Style all elements with the class name "onderdeel"  or id Thema */
+
+.onderdeel {
+    background-color: tomato;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+}
+
+.black-border {
+    border: 5px solid black;
+    color: white;
+    padding: 5px;
+}
+
+.gold-b-double {
+    border: 5px double gold;
+    color: rgb(22, 21, 21);
+    padding: 5px;
+}
+
+.blue-dotted {
+    border: 5px dotted blue;
+    color: rgb(22, 21, 21);
+    padding: 5px;
+}
+
+
+/* H */
+
+body {
+    text-align: center;
+    font-family: Arial;
+    color: rgb(124, 8, 8);
+    background-color: lightblue;
+    padding: auto;
+    margin: auto;
+    border: 5px;
+}
+
+paragraph {
+    color: rgb(54, 2, 2);
+    background-color: rgb(219, 192, 247);
+    border: 5px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+a {
+    color: rgb(54, 2, 2);
+    background-color: rgb(216, 51, 51);
+    border: 2px solid blue;
+}
+
+p {
+    text: 10%;
+    color: rgba(82, 10, 10, 0.178);
+    background-color: rgb(201, 87, 87);
+    border: 2px solid rgb(58, 58, 158);
+}
+
+li {
+    border: 2px solid rgb(19, 17, 19);
+    color: rgb(210, 215, 245);
+}
+
+ul {
+    border: 2px solid rgb(117, 5, 117);
+    color: rgb(124, 8, 8);
+}
+
+smiley {
+    text-align: center;
+    box-sizing: content-box;
+}
+
+me {
+    border: 2px solid rgb(6, 88, 99);
+}
+
+main {
+    border: 1px solid rgb(221, 243, 96);
+    color: rgb(124, 8, 8);
+}
+
+ul {
+    list-style-type: space-counter;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav {
+    list-style-type: space-counter;
+    text-align: left;
+    width: 200px;
+}
+
+navigate {
+    list-style-type: space-counter;
+}
+
+header {
+    padding: 4%;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    border: 1px solid rgb(235, 138, 58);
+    color: rgb(163, 11, 11);
+}
+
+footer {
+    padding: 1px;
+    border: 2px solid Violet;
+    color: rgb(124, 8, 8);
+    margin-right: auto;
+}
+
+@media screen and (min-width: 400px) {
+    body {
+        background-color: lightgreen;
+        color: red;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        background-color: lavender;
+        color: yellow;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: rgb(218, 196, 72);
+        color: rgb(43, 43, 39);
+    }
+}

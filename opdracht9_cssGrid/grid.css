@@ -1,0 +1,106 @@
+﻿#html,
+#body {
+    box-sizing: border-box;
+    background-color: none;
+    height: 100%;
+    padding: 1px;
+    margin: 0px;
+}
+
+#container>div {
+    box-sizing: border-box;
+    background-color: rgb(223, 220, 176);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+#container>div:nth-child(1n) {
+    background-color: #fa8541;
+}
+
+#container>div:nth-child(3n) {
+    background-color: #dbe798;
+}
+
+#container>div:nth-child(2n) {
+    background-color: #ff6f69;
+}
+
+#container>div:nth-child(4n) {
+    background-color: #ffcc5c;
+}
+
+.container>div {
+    font-size: 2em;
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    grid-gap: 1px;
+    border: 1px solid;
+    font-size: 2em;
+    grid-template-areas: "h h h h h h h h h h h h" "m m m m m m m m m m m m" "w w w w w w w w w w w w" "f f f f f f f f f f f f";
+}
+
+.site-header {
+    background-color: rgb(193, 193, 247);
+    grid-area: h;
+    margin: 1px;
+    border: red solid;
+}
+
+.site-main {
+    background-color: rgb(137, 216, 141);
+    grid-area: m;
+    margin: 1px;
+}
+
+.widget-area {
+    background-color: rgb(247, 120, 225);
+    grid-area: w;
+    margin: 1px;
+}
+
+.site-footer {
+    background-color: rgb(89, 111, 238);
+    grid-area: f;
+    margin: 1px;
+}
+
+// style children//
+@media screen and (min-width: 100px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(1fr, auto));
+        grid-template-rows: 30px, auto;
+        height: 100%;
+        display: grid;
+        grid-gap: 1px;
+        border: 1px solid;
+        font-size: 2em;
+        grid-template-areas: "h h h h h h h h h h h h" "m m m m m m m m m m m m" "w w w w w w w w w w w w" "f f f f f f f f f f f f";
+        color: red;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .container {
+        display: grid;
+        grid-gap: 1px;
+        grid-template-columns: repeat(auto-fill, minmax(1fr, auto));
+        grid-template-rows: 420px 1fr;
+        color: rgb(195, 111, 111);
+        grid-template-areas: "h h h m m m m m m m m m" "h h h w w w w w w w w w" "h h h f f f f f f f f f";
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-gap: 1px;
+        color: rgb(13, 14, 14);
+        grid-template-areas: "h h h m m m m m m w w w" "h h h f f f f f f w w w";
+        grid-template-columns: repeat(minmax(30px, 40px));
+        grid-template-rows: 512px 1fr;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="grid.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <nav>
+    <b>Navigate to:</b>
+    <ul>
+      <li><a href="index.html">Index: mijn website</a></li>
+      <li><a href="about.html">About Page</a></li>
+      <li><a href="contact.html">Contact 'formulier'</a></li>
+    </ul>
+  </nav>
+  <body id="green-boarder">
+    <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label id="onderdeel"
+          >Your Name: <input type="text" name="name"
+        /></label>
+      </p>
+      <p>
+        <label id="black-boarder"
+          >Your Email: <input type="email" name="email"
+        /></label>
+      </p>
+      <p>
+        <label
+          >Your Role:
+          <select name="role[]" multiple>
+            <option value="leader">Leader</option>
+            <option value="follower">Follower</option>
+          </select></label
+        >
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+  </body>
+  <footer>
+    <p>&copy; 2021 Mathijs Linssen</p>
+  </footer>
+</html>
