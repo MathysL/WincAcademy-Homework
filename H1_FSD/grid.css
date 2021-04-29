@@ -4,18 +4,17 @@ body {
     background-color: rgba(250, 214, 10, 0.075);
     height: 100%;
     padding: 1px;
-    margin: 0px;
+    margin: 3px;
 }
 
-nav {
+#nav {
     grid-area: n;
     background-color: rgba(238, 223, 136, 0.075);
     height: 20%;
-    padding: 10px;
-    margin: 0px;
+    padding: 2px;
+    margin: 10px;
     background-color: rgb(193, 193, 247);
     grid-area: h;
-    margin: 1px;
     border: red solid;
 }
 
@@ -25,22 +24,22 @@ nav {
     display: grid;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+    font-size: auto;
 }
 
-#container>div:nth-child(1n) {
+.container>div:nth-child(1n) {
     background-color: #fa8541;
 }
 
-#container>div:nth-child(3n) {
+.container>div:nth-child(3n) {
     background-color: #dbe798;
 }
 
-#container>div:nth-child(2n) {
+.container>div:nth-child(2n) {
     background-color: #ff6f69;
 }
 
-#container>div:nth-child(4n) {
+.container>div:nth-child(4n) {
     background-color: #ffcc5c;
 }
 
@@ -51,11 +50,11 @@ nav {
     align-items: center;
     grid-gap: 1px;
     border: 1px solid;
-    font-size: 2em;
-    grid-template-areas: "n n h h h h h h h h h h" "m m m m m m m m m m m m" "w w w w w w w w w w w w" "f f f f f f f f f f f f";
+    grid-template-areas: "n n n n n n h h h h h h" "m m m m m m m m m m m m" "w w w w w w w w w w w w" "f f f f f f f f f f f f";
 }
 
 .site-header {
+    font-size: 2em;
     background-color: rgb(193, 193, 247);
     grid-area: h;
     margin: 1px;
