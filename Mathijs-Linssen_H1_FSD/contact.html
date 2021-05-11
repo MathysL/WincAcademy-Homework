@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Contact</title>
-    <link rel="stylesheet" type="text/css" href="grid.css" />
+    <link rel="stylesheet" type="text/css" href="cssMap/style.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <nav>
-    <b>Navigate to:</b>
-    <ul>
-      <li><a href="index.html">Index: mijn website</a></li>
-      <li><a href="about.html">About Page</a></li>
-      <li><a href="contact.html">Contact 'formulier'</a></li>
-    </ul>
-  </nav>
-  <body id="green-boarder">
+</head>
+<body id="green-boarder">
+    <nav>
+        <b id="grey-background">Navigate to:</b>
+        <ul id="blue-background">
+            <li><a href="indexPagina.html" id="Thema">index: site</a></li>
+            <li><a href="index.html">Index: github</a></li>
+            <li id="Thema"><a href="about.html">About Page</a></li>
+            <li><a href="contact.html">Contact 'formulier'</a></li>
+            <li id="Thema"><a href="blog.html">Index: mijn blog</a></li>
+            <li><a href="receptenPagina.html">Recepten Pagina</a></li>
+            <li id="Thema"><a href="contact - (receptenformilier).html">Contact 'formulier'</a></li>
+        </ul>
+    </nav>
     <form name="contact" method="POST" data-netlify="true">
-      <p>
-        <label id="onderdeel"
-          >Your Name: <input type="text" name="name"
-        /></label>
-      </p>
-      <p>
-        <label id="black-boarder"
-          >Your Email: <input type="email" name="email"
-        /></label>
-      </p>
-      <p>
-        <label
-          >Your Role:
-          <select name="role[]" multiple>
-            <option value="leader">Leader</option>
-            <option value="follower">Follower</option>
-          </select></label
-        >
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
+        <p><label id="onderdeel">Your Name: <input type="text" name="name" /></label></p>
+        <p><label id="black-boarder">Your Email: <input type="email" name="email" /></label></p>
+        <p>
+            <label>
+                Your Role:
+                <select name="role[]" multiple>
+                    <option value="leader">Leader</option>
+                    <option value="follower">Follower</option>
+                </select>
+            </label>
+        </p>
+        <p><label>Message: <textarea name="message"></textarea></label></p>
+        <p><button type="submit">Send</button></p>
     </form>
-  </body>
-  <footer>
-    <p>&copy; 2021 Mathijs Linssen</p>
-  </footer>
+    <footer>
+        <p>&copy; 2021 Mathijs Linssen</p>
+    </footer>
+</body>
 </html>

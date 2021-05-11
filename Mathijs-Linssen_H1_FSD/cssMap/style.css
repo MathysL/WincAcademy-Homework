@@ -7,30 +7,27 @@
     background-color: rgb(228, 231, 228);
     color: black;
 }
-
 #blue-background {
     background-color: rgb(22, 22, 145);
 }
-
 #green-background {
     background-color: green;
 }
 
 .blogpost {
     display: flex;
-    flex-grow: auto;
-    width: 300px;
+    width: 20%;
     flex-direction: column;
     background-color: DodgerBlue;
 }
 
 .blogpost>div {
     background-color: #fff;
-    border: 1px auto rgb(136, 63, 63);
+    border: 1px 1px rgb(136, 63, 63);
     width: 390px;
     margin: 10px;
     text-align: center;
-    line-height: auto;
+    line-height: 2em;
     font-size: 14px;
 }
 
@@ -65,16 +62,17 @@
 /* H */
 
 body {
+    display: unset;
     text-align: center;
     font-family: Arial;
     color: rgb(124, 8, 8);
     background-color: lightblue;
-    padding: auto;
-    margin: auto;
+    padding: 1px;
+    margin: 0px;
     border: 5px;
 }
 
-paragraph {
+p {
     color: rgb(54, 2, 2);
     background-color: rgb(219, 192, 247);
     border: 5px;
@@ -88,8 +86,8 @@ a {
     border: 2px solid blue;
 }
 
-p {
-    text: 10%;
+section {
+    display: flex;
     color: rgba(82, 10, 10, 0.178);
     background-color: rgb(201, 87, 87);
     border: 2px solid rgb(58, 58, 158);
@@ -105,12 +103,12 @@ ul {
     color: rgb(124, 8, 8);
 }
 
-smiley {
+img {
     text-align: center;
     box-sizing: content-box;
 }
 
-me {
+h1 {
     border: 2px solid rgb(6, 88, 99);
 }
 
@@ -120,7 +118,7 @@ main {
 }
 
 ul {
-    list-style-type: space-counter;
+    list-style-type: none;
 }
 
 li {
@@ -128,17 +126,24 @@ li {
 }
 
 nav {
-    list-style-type: space-counter;
+    grid-area: n;
+    display: grid;
+    list-style-type: none;
     text-align: left;
-    width: 200px;
 }
 
-navigate {
-    list-style-type: space-counter;
+.nav {
+    grid-area: n;
+    display: grid;
+    list-style-type: none;
+    text-align: left;
 }
 
 header {
-    padding: 4%;
+    display: grid;
+    grid-area: h;
+    margin: 1px;
+    padding: 1%;
     text-align: center;
     background: #1abc9c;
     color: white;
@@ -147,10 +152,12 @@ header {
 }
 
 footer {
+    display: grid;
+    grid-area: f;
     padding: 1px;
     border: 2px solid Violet;
     color: rgb(124, 8, 8);
-    margin-right: auto;
+    margin: 1px;
 }
 
 @media screen and (min-width: 400px) {

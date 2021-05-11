@@ -80,7 +80,6 @@ body {
     margin: 1px;
 }
 
-// style children//
 @media screen and (min-width: 100px) {
     .container {
         grid-template-columns: repeat(auto-fill, minmax(1fr, auto));
