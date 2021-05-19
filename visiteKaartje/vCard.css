@@ -1,28 +1,36 @@
 body {
+    box-sizing: border-box;
     display: grid;
     border: 1px solid black;
-    width: 800px;
-    height: 400px;
+    width: 60%;
+    height: 30%;
     grid-template-areas: "h h h" "m m i" "f f f";
+    background-color: aliceblue;
 }
+
 div {
     background: none;
- }
+}
+
 header {
     text-align: left;
     grid-area: h;
 }
+
 main {
     text-align: left;
     grid-area: m;
 }
-footer{
+
+footer {
     grid-area: f;
 }
+
 img1 {
     grid-area: i;
     text-align: right;
 }
+
 h1 {
     text-align: center;
     font-family: serif;
@@ -37,18 +45,23 @@ h2 {
     color: #00008b;
     font-size: 1em;
 }
+
 buttonG {
+    padding: 10px;
     border: 3px solid green;
     grid-area: f;
     background-color: none;
     cursor: pointer;
     text-align: center;
 }
+
 buttonR {
+    padding: 10px;
+    box-sizing: border-box;
     border: 3px solid red;
     grid-area: f;
-    width: 100%;
-    cursor: pointer;
+    width: 200px;
+    cursor: text;
     text-align: center;
 }
 
