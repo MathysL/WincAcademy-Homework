@@ -1,0 +1,58 @@
+body {
+    display: grid;
+    border: 1px solid black;
+    width: 800px;
+    height: 400px;
+    grid-template-areas: "h h h" "m m i" "f f f";
+}
+div {
+    background: none;
+ }
+header {
+    text-align: left;
+    grid-area: h;
+}
+main {
+    text-align: left;
+    grid-area: m;
+}
+footer{
+    grid-area: f;
+}
+img1 {
+    grid-area: i;
+    text-align: right;
+}
+h1 {
+    text-align: center;
+    font-family: serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-bottom: 3px solid #57b1dc;
+    margin-top: 1px;
+}
+
+h2 {
+    grid-area: m;
+    color: #00008b;
+    font-size: 1em;
+}
+buttonG {
+    border: 3px solid green;
+    grid-area: f;
+    background-color: none;
+    cursor: pointer;
+    text-align: center;
+}
+buttonR {
+    border: 3px solid red;
+    grid-area: f;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.block:hover {
+    background-color: cornflowerblue;
+    color: black;
+}
