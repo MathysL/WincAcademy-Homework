@@ -1,0 +1,62 @@
+﻿*, *::before.*::after
+body {
+    font-family: sans-serif;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: brown;
+}
+.currentPage {
+    background-color:slategrey;
+}
+.currentPage:hover {
+    background-color: lightblue;
+}
+.currentPage:focus {
+    background-color: aqua;
+}
+
+a:first-child:hover {
+    color: cornflowerblue;
+}
+
+a:last-child:hover {
+    color: brown;
+}
+
+a:nth-child(2n+2):active {
+    color: red;
+    text-transform:capitalize;
+}
+
+a:nth-child(2n+3):visited {
+    color: yellow;
+}
+
+a:nth-child(2n+4):focus {
+    color: lawngreen;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 2rem;
+}
+
+a {
+    position: relative;
+    overflow: hidden;
+    color: #272727;
+    font-weight: 700;
+}
+
+p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: orange;
+}
+
+a::after {
+}
