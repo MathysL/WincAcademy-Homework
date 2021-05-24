@@ -1,0 +1,57 @@
+﻿body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: brown;
+}
+
+.currentPage {
+    background-color: slategrey;
+}
+
+.currentPage:hover {background-color: lightblue;}
+
+.currentPage:focus {background-color: aqua;}
+
+a:first-child:hover {color: cornflowerblue;}
+
+a:last-child:hover {color: brown;}
+
+a:nth-child(2n+2)::hover {
+    color: darkorange;
+}
+a:nth-child(2n+2):active {
+    color: red;
+    font-style: italic;
+}
+
+a:nth-child(2n+3):visited {color: yellow;}
+
+a:nth-child(2n+4):focus {background-color: lawngreen;}
+
+li {
+    display: inline;
+    float: left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        background-color: #111;
+    }
