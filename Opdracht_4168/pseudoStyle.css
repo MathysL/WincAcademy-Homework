@@ -1,19 +1,49 @@
-﻿*, *::before.*::after
-body {
+﻿body {
+    color: rgb(109, 96, 21);
+    display: inline;
     font-family: sans-serif;
     height: 100%;
     display: flex;
     align-items: center;
-    background: brown;
 }
+
+ul {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline;
+    float: left;
+}
+
+a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+    position: relative;
+    overflow: hidden;
+    color: #272727;
+    font-weight: 700;
+}
+
 .currentPage {
-    background-color:slategrey;
+    background-color: slategrey;
 }
-.currentPage:hover {
+
+a:hover {
     background-color: lightblue;
 }
-.currentPage:focus {
+
+ul li a:focus {
     background-color: aqua;
+}
+
+a:nth-child(2n+1):hover {
+    color: cornflowerblue;
 }
 
 a:first-child:hover {
@@ -24,39 +54,20 @@ a:last-child:hover {
     color: brown;
 }
 
+ul li a:last-child:hover {
+    color: brown;
+}
+
 a:nth-child(2n+2):active {
     color: red;
-    text-transform:capitalize;
+    font-style: italic;
 }
 
 a:nth-child(2n+3):visited {
     color: yellow;
 }
 
-a:nth-child(2n+4):focus {
+#green :focus {
     color: lawngreen;
-}
-
-p {
-    font-size: 1.2rem;
-    margin: 2rem;
-}
-
-a {
-    position: relative;
-    overflow: hidden;
-    color: #272727;
-    font-weight: 700;
-}
-
-p::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    background-color: orange;
-}
-
-a::after {
+    background: rgb(42, 95, 165);
 }

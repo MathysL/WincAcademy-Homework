@@ -1,5 +1,5 @@
 ﻿body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, italic, sans-serif;
     height: 100%;
     display: flex;
     align-items: center;
@@ -10,25 +10,38 @@
     background-color: slategrey;
 }
 
-.currentPage:hover {background-color: lightblue;}
+.currentPage:hover {
+    background-color: lightblue;
+}
 
-.currentPage:focus {background-color: aqua;}
+.currentPage:focus {
+    background-color: aqua;
+}
 
-a:first-child:hover {color: cornflowerblue;}
+a ::first-child:hover {
+    color: cornflowerblue;
+}
 
-a:last-child:hover {color: brown;}
+a :last-child:hover {
+    color: brown;
+}
 
-a:nth-child(2n+2)::hover {
+a:nth-child(2n + 2)::hover {
     color: darkorange;
 }
-a:nth-child(2n+2):active {
+
+a:nth-child(2n + 2):active {
     color: red;
     font-style: italic;
 }
 
-a:nth-child(2n+3):visited {color: yellow;}
+a:nth-child(2n + 3):visited {
+    color: yellow;
+}
 
-a:nth-child(2n+4):focus {background-color: lawngreen;}
+a:nth-child(2n + 4):focus {
+    background-color: lawngreen;
+}
 
 li {
     display: inline;
@@ -44,6 +57,8 @@ ul {
 }
 
 li a {
+    display: inline;
+    float: left;
     display: block;
     color: white;
     text-align: center;
@@ -51,7 +66,9 @@ li a {
     text-decoration: none;
 }
 
-    /* Change the link color to #111 (black) on hover */
-    li a:hover {
-        background-color: #111;
-    }
+
+/* Change the link color to #111 (black) on hover */
+
+li a:hover {
+    background-color: #111;
+}
