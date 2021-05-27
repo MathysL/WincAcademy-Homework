@@ -1,0 +1,45 @@
+body {
+    padding: 14px 28px;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0px;
+}
+
+li {
+    text-align: center;
+    line-height: 2;
+    background: slategrey;
+}
+
+div {
+    width: 12em;
+    float: left;
+    margin-right: 2em;
+}
+
+hr {
+    clear: both;
+    padding-top: 1em;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.one li:first-child {
+    background-color: lightsteelblue;
+}
+
+.two > :nth-child(2) :nth-child(3) {
+    background-color: lightsteelblue;
+}
+
+.three > :nth-child(odd) li:nth-child(-n+3) {
+    background-color: lightsteelblue;
+}
+
+div:before {
+    font-family: monospace;
+    white-space: nowrap;
+    font-size: 12px;
+}
