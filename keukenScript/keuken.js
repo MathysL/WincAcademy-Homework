@@ -10,9 +10,9 @@ const makeSushi = function () {
     console.log("De sushi snijden in stukken en klaar!");
     console.log("O O O O O O // O O      ");
 };
-//
+/*
 makeSushi();
-//
+*/
 const makePizza = function () {
   console.log("Maak een pizza, met wat water, een kop meel en beetje olijf olie");
   console.log("Doe de ingrediënten voor de bodem in een mengkom, en maak het deeg");
@@ -23,6 +23,13 @@ const makePizza = function () {
     console.log("na 20 minuten is de pizza klaar en mag hij uit de oven");
   console.log("Pizza time");
 };
-//
+/*
+makeSushi();
+*/
+// plaats de besteling in de keuken.js en zie hieronder, de bestellingen: (nog handmatig).....
+
+makeSushi();
+makeSushi();
+makeSushi();
 makePizza();
-//
+makePizza();
