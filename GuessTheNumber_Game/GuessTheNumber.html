@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Guess, The Number, Game" content="HTML, CSS, JavaScript">
+    <title>GuessTheNumber Game</title>
+    <meta name="author" content="Mathijs Linssen">
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div logo>\*_*/</div>
+    <p>
+        <h2> "Welkom! Wat is je naam?"</h2>
+        <button onclick="myName()">klik op de knop om te beginnen</button>
+    </p>
+
+    <p id="numberGame"></p>
+
+    <script>
+        function myName() {
+            var naam = prompt("Welkom! Wat is je naam ?", "Harry Potter");
+            if (naam != null) {
+                document.getElementById("numberGame").innerHTML =
+                    "Hey, hallo " + naam + "! klaar voor de start..?";
+            }
+        }
+    </script>
+
+
+    <p>
+        <h1>Guess The Number</h1>
+        "Voer een nummer in van 0 tot 25 om te beginnenmet raden..."
+    </p>
+
+    <div class="form">
+        <label for="guessField">Geef je getal in: </label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Submit guess"
+               class="guessSubmit" id="submitguess">
+    </div>
+
+    <script type="text/javascript">
+
+        // random value generated
+        var y = Math.floor(Math.random() * 25 + 1);
+
+        // counting the number of guesses
+        // made for correct Guess
+        var guess = 1;
+
+        document.getElementById("submitguess").onclick = function () {
+            // number guessed by user
+            var x = document.getElementById("guessField").value;
+            // var   stats = pogingMax - poging;
+            //stats=<pogingMax < poging
+            if (x == y) {
+                alert("Gefeliciteerd je hebt gewonnen, en goed geraden met .."
+                    + guess + " pogingen ");
+            }
+            else if (x > y) {
+                    guess++;
+                    alert("SORRY!! Dat is niet correct, het is een lager nummer... (en dit is poging numerr:  " + guess + " ! komt het eind in zicht) ;D ");
+            }
+            else if (x < y) {
+                    guess++;
+                    alert("SORRY!! Dat is niet correct, het is een hoger nummer (en dit is poging numerr:  " + guess + " ! komt het eind in zicht) ;< ");
+            }
+            else alert("e.g: Dag" + naam + "Tot devolgende keer ");
+            
+                alert("e.g: Dag" + naam + "Tot devolgende keer ");
+            }
+
+
+
+    </script>
+</body>
+</html>                    
