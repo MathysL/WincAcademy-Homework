@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F1F1F1;
+}
+/*
+.nav-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+    flex-wrap: nowrap;
+    z-index: 1000;
+}
+
+.btn-toggle-nav {
+    width: 60px;
+    height: 10%;
+    background-color: #F98F39;
+    background-image: url("img/NavMenu.png");
+}
+
+    .btn-toggle-nav:hover {
+        background-color: #F98F39;
+        opacity: 50%;
+        height: 100%;
+    }
+
+.nav-main ul {
+    background-color: #F98F39;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 5px;
+    height: 40px;
+}
+
+    .nav-main ul li {
+        list-style: none;
+        line-height: normal;
+    }
+
+        .nav-main ul li a {
+            display: block;
+            height: 100%;
+            padding: 0 10px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: arial;
+            color: #111;
+         // transition:  0.3s all ease-in-out; 
+        }
+    
+    .nav-sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: calc(100vh-60px);
+    padding: 0 5px;
+    background-color: #1b1b1b;
+}
+
+    .nav-sidebar ul {
+        padding-top: 15px;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+        .nav-sidebar ul li span, .nav-sidebar ul li a {
+            display: block;
+            height: 60px;
+            padding: 0 10px;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+            .nav-sidebar ul li a:hover {
+                background-color: #222;
+            }
+
+
+*/
+.body-grey,
+.menuItem-grey {
+    background: grey;
+}
+
+.body-red,
+.menuItem-red {
+    background: red;
+}
+
+.body-orange,
+.menuItem-orange {
+    background: orange;
+}
+
+.body-purple,
+.menuItem-purple {
+    background: purple;
+}
+
+.body-green,
+.menuItem-green {
+    background: green;
+}
+img {position:absolute;
+     height:8%;
+     width:8%;
+     top:auto;
+}
+.hamburger {
+    font-size: 3rem;
+    padding: 10px;
+}
+
+.colorName {
+    padding: 10px;
+}
+
+.colorName-hidden {
+    display: none;
+}
+
+.colorName-visible {
+    display: block;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+.menu-closed {
+    position: relative;
+    left: -250px;
+    transition: left 500ms;
+}
+
+.menu-opened {
+    position: relative;
+    left: 0px;
+    transition: left 500ms;
+}
+
+.menuItem {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+}
+
+    .menuItem + .menuItem {
+        margin-top: 5px;
+    }
+
+.radioButton {
+    margin-right: 5px;
+}
+
