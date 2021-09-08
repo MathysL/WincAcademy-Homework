@@ -50,3 +50,5 @@ const combineArrays= function (array1, array2) {
 };
 consol.log(combineArrays([1, 2, 3], [4, 5, 6]));
   // resultaat: [1,2,3,4,5,6]
+//
+// meer info https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ 
