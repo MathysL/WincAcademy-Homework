@@ -112,5 +112,4 @@ let obj = {
 obj.addElem({})
 obj.addElem({})
 console.log(obj.length)
-// → 2
-Copy to
+// → 2 Copy to copy2
