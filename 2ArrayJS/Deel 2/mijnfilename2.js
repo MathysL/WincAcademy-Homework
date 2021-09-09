@@ -11,7 +11,7 @@ const findSpiderMan = function (superheroes) {
 };
 console.log("Find Spiderman:", findSpiderMan(superheroes));
 
-// B Double Array values
+// B doubleArrayValues
 const doubleArrayValues = function (array) {
     let newArray = [];
     array.forEach(number => {
@@ -45,9 +45,10 @@ const containsNumberBiggerThan10 = function (array) {
         return number > 10;
     });
 };
-// true/false  J/N is een gesloten vraag );
-console.log("Je suis bigger than 10:", containsNumberBiggerThan10([1, 4, 3, 6, 9, 7, 11])
-);
+console.log("Is the number bigger(10)?."(containsNumberBiggerThan10([1, 4, 3, 6, 9, 7, 11]))
+); // result should be true
+console.log("Is the number bigger(10)?."(containsNumberBiggerThan10([1, 2, 1, 2, 1, 2]))
+); // result should be false
 
 // D
 function isItalyInTheGreat7(array) {
@@ -102,8 +103,8 @@ console.log(
 );
 
 // G
-const numbers = [1, 81, 4, 53, 3, 6, 11, 77, 84, 98, 101, 206, 234];
-
+console.log(bigSum([1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 11, 77, 84, 98, 101, 206, 234]))
+  // result should be 1118
 const bigSum = function (array) {
     return array.reduce((acc, number) => {
         return acc + number;

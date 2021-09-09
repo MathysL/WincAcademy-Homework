@@ -39,16 +39,18 @@ const impeachTrumpSplice = function (array) {
 console.log(impeachTrumpSlice(presidents)); // ["Obama", "Bush", "Clinton"]
 console.log(impeachTrumpSplice(presidents)); // ["Obama", "Bush", "Clinton"]
 
-// F
-console.log(stringsTogether(['Winc', 'Academy', 'is', 'leuk', ';-}']))
-  //resultaat: "Winc Academy is leuk ;-}"
-return array.join(" ");
-
-//G
+// F array = ['Winc', 'Academy', 'is', 'leuk', ';-}']; 
+const stringsTogether = function (array) {
+    return array.join(" ");
+};
+console.log(stringsTogether(['Winc', 'Academy', 'is', 'leuk', ';-}']));
+// resultaat: "Winc Academy is leuk ;-}" 
+// G
 const combineArrays= function (array1, array2) {
     return array1.concat(array2);
 };
-consol.log(combineArrays([1, 2, 3], [4, 5, 6]));
-  // resultaat: [1,2,3,4,5,6]
+console.log(combineArrays([1, 2, 3], [4, 5, 6]));
+
+// resultaat: [1,2,3,4,5,6]
 //
 // meer info https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ 
