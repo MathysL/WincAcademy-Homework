@@ -1,4 +1,4 @@
-const superheroes = [
+﻿const superheroes = [
     {
         "name": "Batman",
         publisher: "DC Comics",
@@ -105,30 +105,12 @@ const superheroes = [
         weight: "unknown"
     }
 ];
-/*  https://www.youtube.com/watch?v=G3BS3sh3D8Q&t=1s
- * (.filter 
- * https://www.youtube.com/watch?v=4_iT6EGkQfk
- * and .reduce)
- * https://www.youtube.com/watch?v=g1C40tDP0Bk
-*/
-// 1 Maak een array van alle superhelden namen
-console.log("s.u .p e.r");
-// .map  console.log(superheroes.map);
-const heroNames = superheroes.map(superhero => {
+
+// 01 Maak een array van alle superhelden namen
+const superheroNames = superheroes.map(superhero => {
     return superhero.name;
 });
-console.log(heroNames);
-// print ...
-// superheroes.map(heroes => { return [(hero = "is it.." + findSuperMan)] }).filter(hero => {
-console.log("no its.." + heroNames);
-    // Pseudo code (doe iets met de hero functie net gemaakt):
-  //  return [hero.map.slice(1, 4) + ("en er dus anders uitziet dan die originele array")]});
-/*
- * // print ... console.log(".filter");
- * filter: console.log(superheroes.filter);
- * const findSuperMan = (superheroes) => {superheroes.filter((superhero)=> { superhero.name === "Superman";});};
- * console.log("Find Superman:", findSuperMan(superheroes));
-*/ 
+console.log(superheroNames);
 
 // 2 Maak een array van alle "lichte" superhelden (< 190 pounds)
 const lightsuperheroes = superheroes.filter(superhero => {
@@ -138,47 +120,40 @@ console.log(lightsuperheroes.length);
 
 // 3 Maak een array met de namen van de superhelden die 200 pounds wegen
 //Stap 1:
-const heavySupersuperheroes = superheroes.filter(superhero => {
-    return superhero.weight == 200;
-});
-// Let op! Deze arrow functie kan op 1 regel: weet jij hoe?
-// Alternatief: const heavySupersuperheroes = superheroes.filter(superhero => superhero.weight == 200);
+const heavySupersuperheroes = superheroes
+    .filter(superhero => superhero.weight == 200);
 
 //Stap 2:
-const heavySupersuperheroNames = heavySupersuperheroes.map(superhero => {
-    return superhero.name;
-});
-// Let op! Deze arrow functie kan op ook op 1 regel: weet jij hoe?
-// Alternatief: const heavySupersuperheroNames = heavySupersuperheroes.map(superhero => superhero.name);
-
+const heavySupersuperheroNames = heavySupersuperheroes
+    .map(superhero => superhero.name);
 console.log(heavySupersuperheroNames);
 
-// 3 Alternatieve oplossing: chainen:
-const heavySupersuperheroNamesChained = superheroes
+// 3 Extra: chaining ⛓️
+const heavySupersuperheroChained = superheroes
     .filter(superhero => superhero.weight == 200)
     .map(superhero => superhero.name);
-console.log(heavySupersuperheroNamesChained);
+console.log(heavySupersuperheroChained);
 
 // 4 Maak een array met alle comics waar de superhelden hun "first apprearances" hebben gehad
-// Deze is gemaakt met een implicit return statement (oftwel een one-liner)
-const firstAppearance = superheroes.map(superhero => superhero.first_appearance);
-console.log("firest appearance:", firstAppearance);
+// 
+const firstAppearance = superheroes
+    .map(superhero => superhero.first_appearance);
+console.log("first appearances :" + firstAppearance);
 
 // 5 Maak een array met alle superhelden van DC Comics en een array met alle superhelden van Marvel Comics
-// Deze is gemaakt met een implicit return statement (oftwel een one-liner)
-const DCComics = superheroes.filter(superhero => superhero.publisher === "DC Comics");
-const marvelComics = superheroes.filter(superhero => superhero.publisher === "Marvel Comics");
-console.log("DC Comics:", DCComics, "Marvel Comics:", marvelComics);
+const DCComics = superheroes
+    .filter(superhero => superhero.publisher === "DC Comics");
+console.log("DC Comics:", DCComics);
+const marvelComics = superheroes
+    .filter(superhero => superhero.publisher === "Marvel Comics");
+console.log("Marvel Comics:", marvelComics);
 
 // 6 Tel het gewicht van alle superhelden van DC Comics bij elkaar op
-// Deze is gemaakt voor de pro's met een implicit return statement (oftwel een one-liner)
-// EN een een in chain:
-const addedWeightDC = DCComics.map(superhero => {
-    return superhero.weight !== "unknown" ? parseInt(superhero.weight, 10) : 0;
-}).reduce((weight1, weight2) => weight1 + weight2);
-
-console.log("TotalWeight of DC Comics - supersmall version:", addedWeightDC);
-
+const addWeightDC = DCComics
+    .map(superhero => {return superhero.weight !== "unknown" ? parseInt(superhero.weight, 10) : 0; })
+    .reduce((weight1, weight2) => weight1 + weight2);
+console.log("TotalWeight of DC Comics - supersmall version:", addWeightDC);
+// Let op! Conditionals to the rescue! 
 //De bovenstaande oplossing kun je ook wat uitgebreider opschrijven:
 const superheroWeights = DCComics.map(superhero => {
     if (superhero.weight !== "unknown") {
@@ -191,38 +166,37 @@ const superheroWeights = DCComics.map(superhero => {
     }
 });
 
-const addedWeightOfsuperheroes = superheroWeights.reduce((weight1, weight2) => {
-    return weight1 + weight2;
-});
-console.log("TotalWeight of DC Comics:", addedWeightDC, addedWeightOfsuperheroes);
+const totalWeightOffSuperheroes = superheroWeights
+    .reduce((weight1, weight2) => weight1 + weight2);
+console.log("TotalWeight of DC Comics:", addWeightDC, totalWeightOffSuperheroes);
 
 // 7 Doe hetzelfde met alle superhelden van Marvel Comics
-const addedWeightMarvel = marvelComics
+const addWeightMarvel = marvelComics
     .map(superhero => {
-        return superhero.weight !== "unknown" ? parseInt(superhero.weight, 10) : 0;
+        return superhero.weight !== "unknown" ? parseInt(superhero.weight, 0.1) : 0;
     })
     .reduce((weight1, weight2) => weight1 + weight2, 0);
 // die 0 op het laats, daarmee geef je aan wat de initiele waarde is van de reduce functie.
-console.log("TotalWeight of Marvel:", addedWeightMarvel);
+console.log("TotalWeight of Marvel:", addWeightMarvel);
 
 // 8 Bonus: vind de zwaarste superheld!
-// First cast all values to a number or 0 if unknown
-const allsuperheroes = superheroes.map(superhero => {
-    const weight = superhero.weight !== "unknown" ? parseInt(superhero.weight) : 0;
+// safthy First: cast all values to a number or 0 if unknown
+const allSupers = superheroes.map(superhero => {
+    const weight = superhero
+        .weight !== "unknown" ? parseInt(superhero.weight)
+        : 0;
     superhero.weight = weight;
     return superhero;
 });
 // next, use reduce to find the largest value
-const heaviestsuperhero = allsuperheroes.reduce(
-    (currentHeaviestsuperhero, currentsuperhero) => {
-        if (currentsuperhero.weight > currentHeaviestsuperhero.weight) {
-            return currentsuperhero;
+const heaviestSuper = allSupers
+    .reduce((currentheaviestSuper, Super) => {
+        if (Super.weight > currentheaviestSuper.weight) {
+            return Super;
         } else {
-            return currentHeaviestsuperhero;
+            return currentheaviestSuper;
         }
-    },
-    allsuperheroes[0]
-    // met deze laatste waarde geef je aan wat de initiele waarde moet zijn van de functie
-);
+    }, allSupers[0]);
+// reset all superheroes met 0 
 
-console.log("The Heaviest hero is. ", heaviestsuperhero);
+console.log("The Heaviest Super hero is : ", heaviestSuper);
