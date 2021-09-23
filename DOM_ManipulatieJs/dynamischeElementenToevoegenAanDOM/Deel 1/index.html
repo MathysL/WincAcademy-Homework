@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>List of Animals</title>
+    <script defer type="text/javascript" src="add.js"></script>
+</head>
+<body>
+    <div>
+        <h1>The Big Five</h1>
+        <ul id="item-list" class="big-five-list">
+            <li class="big-five-list-item">
+                <button id="Lion" class="big-five-button">Lion</button>
+            </li>
+            <li class="big-five-list-item">
+                <button id="Leopard" class="big-five-button">Leopard</button>
+            </li>
+            <li class="big-five-list-item">
+                <button id="Elephant" class="big-five-button">Elephant</button>
+            </li>
+            <li class="big-five-list-item">
+                <button id="Rhino" class="big-five-button">Rhino</button>
+            </li>
+            <li class="big-five-list-item">
+                <button id="Buffalo" class="big-five-button">Buffalo</button>
+            </li>
+            <li id="hidden" class="big-five-list-item">
+              <button id="Duck" class="big-five-button">Buffalo</button>
+            </li>
+        </ul>
+
+        <h1>Animals spotted:</h1>
+        <ul id="spotted-animals-list">
+            <li class="spotted-animals-list-item">Duck</li>
+        </ul>
+        <div style.backgroud-color="red" ;>
+            <button id="remove-first-item-button" class="removeFirst">Remove the first</button>
+            <button id="remove-all-button" class="removeAll">Remove all animals from the spotted list</button>
+        </div>
+
+    </div>
+</body>
+</html>
+/*
+Deel 1 - Elementen toevoegen aan de DOM
+Je bent op safari en gaat The Big Five spotten. Het enige dier dat je tot nu toe hebt gespot is een eend.
+
+Opdracht: Wanneer ik als gebruiker op een button van ��n van de Big 5 klik, wil ik dat die verschijnt in mijn lijstje met "animals spotted".
+
+Todo list voor deze opdracht:
+
+Maak een event-listener vast aan de buttons
+
+Maak een functie die gecalled wordt op het moment dat er op 1 van de buttons wordt geklikt. Check dit met een console.log.
+Zorg dat het click event wordt doorgegeven aan deze functie.
+Zorg dat je toegang hebt tot de waarde (value) van de button waar op is geklikt in deze functie. Check dit met console.log. De uitkomst die je wilt zien in de console wanneer je klikt is: Leopard / Lion / Elephant / Rhino of Buffalo.
+Cre�er een nieuw list-item met JavaScript met de bovenstaande waarde (namelijk het dier waar je op hebt geklikt.
+Selecteer het parent-element waar je dit nieuwe list-item aan vast wilt maken (de spotted animals list).
+Maak het nieuwe list-item vast aan het parent-element.
+*/
