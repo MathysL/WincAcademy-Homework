@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <script defer src="Scripts/ImdbDataBase.js"></script>
+    <script defer src="Scripts/IFZScript.js"></script>
+    <script defer src="Scripts/ImdbDataBase.js"></script>
+    <link href="Style.css" rel="stylesheet">
+    <title>FilmZoeker</title>
+</head>
+<body>
+    <header>
+        <h1 id="header">
+            <a id="logoImdb" href="ImdbFilmZoeker.html">imdb</a> Film Zoeker
+        </h1>
+    </header>
+        <!--//*input  buttons *//-->
+      
+        <nav id="filters" class="filter">
+            <input type="radio" name="filterFilms" id="cat0" onclick="if(this.checked){imdb(this.id)}"><label>Alle films</label>
+            <input type="radio" name="filterFilms" id="cat1" onclick="if(this.checked){imdb(this.id)}"><label>Nieuwste films</label>
+            <input type="radio" name="filterFilms" id="cat2" onclick="if(this.checked){imdb(this.id)}"><label>Avengers films</label>
+            <input type="radio" name="filterFilms" id="cat3" onclick="if(this.checked){imdb(this.id)}"><label>X-Men films</label>
+            <input type="radio" name="filterFilms" id="cat4" onclick="if(this.checked){imdb(this.id)}"><label>Princess films</label>
+            <input type="radio" name="filterFilms" id="cat5" onclick="if(this.checked){imdb(this.id)}"><label>Batman films</label>
+            <input type="text" name="filterFilms" id="cat6" placeholder="zoek op titel" onkeydown="zoekKnop()"><label> 'Zoek' met overbodige "knop" </label>
+            <button type="submit" name="filterFilms" searchEnter="searchEnter()">Zoek</button>
+            <label hide id="myBtns"></label>
+        </nav>
+    <main>
+
+        <!--//*output div id="nN" style,display block//-->
+        <div id="films"></div>
+    </main>
+    <footer>Film gevonden anders, zo niet dan zie je dit.. alvast veel plezier met de film ;D en tot de volgende keer</footer>
+</body>
+</html>

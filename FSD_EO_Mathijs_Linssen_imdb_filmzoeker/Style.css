@@ -1,0 +1,127 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    list-style: none;
+    color: lightgrey;
+    background-color: black;
+    padding: 20px;
+    font-family: "Arial";
+}
+
+header {
+    color: white;
+    background-color: black;
+    padding-left: 20px;
+}
+
+main {
+    display: grid;
+    width: 100%;
+}
+
+#films {
+    padding-left: 5px;
+    width: 97%;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+#filters {
+    padding-left: 20px;
+    background-color: white;
+}
+
+
+
+div.content.newest {
+    background-color: antiquewhite;
+    color: blanchedalmond;
+}
+
+div#myBtnContainer.select {
+    background-image: none;
+    background-color: whitesmoke;
+}
+
+input#myinput {
+    margin-left: 1%;
+    margin-right: 1%;
+    color: black
+}
+
+body {
+}
+
+/* Center website */
+#main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+    /* Add padding BETWEEN each column (if you want) */
+    .row,
+    .row > .column {
+        padding: 8px;
+    }
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+    /* Add a grey background color on mouse-over */
+    .btn:hover {
+        background-color: #ddd;
+    }
+
+    /* Add a dark background color to the active button */
+    .btn.active {
+        background-color: #666;
+        color: white;
+    }
