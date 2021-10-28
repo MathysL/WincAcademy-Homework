@@ -1,4 +1,4 @@
-// JavaScript source code
+// JavaScript source code db template Movies
 Movies = [
     {
         "Title": "X-Men: Days of Future Past",
