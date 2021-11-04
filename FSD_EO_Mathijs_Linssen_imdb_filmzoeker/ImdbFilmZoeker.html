@@ -1,40 +1,44 @@
 ﻿<!DOCTYPE html>
 <html lang="nl">
 <head>
-    <script defer src="Scripts/ImdbDataBase.js"></script>
-    <script defer src="Scripts/IFZScript.js"></script>
-    <link href="Style.css" rel="stylesheet">
-    <title>FilmZoeker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>imdb Film Zoeker</title>
+    <script defer src="ImdbDataBase.js"></script>
+    <script defer src="script.js"></script>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <header id="header">
-        <h1 >
-        <a id="logoImdb" href="ImdbFilmZoeker.html">imdb</a>
-        Film Zoeker
-        </h1>
-    </header id="header">
+        <h1><a id="logoImdb" href="ImdbFilmZoeker.html">imdb</a>Film Zoeker</h1>
         <!--//*input  buttons *//-->
-      
-        <nav id="filters" class="filter">
-            <label><input type="radio" name="filterFilms" id="cat0" for="cat0" onclick="if(this.checked){imdb(this.id)}">Alle films</label>
-            <label><input type="radio" name="filterFilms" id="cat1" for="cat1" onclick="if(this.checked){imdb(this.id)}">Nieuwste films</label>
-            <label><input type="radio" name="filterFilms" id="cat2" for="cat2" onclick="if(this.checked){imdb(this.id)}">Avengers films</label>
-            <label><input type="radio" name="filterFilms" id="cat3" for="cat3" onclick="if(this.checked){imdb(this.id)}">X-Men films</label>
-            <label><input type="radio" name="filterFilms" id="cat4" for="cat4" onclick="if(this.checked){imdb(this.id)}">Princess films</label>
-            <label><input type="radio" name="filterFilms" id="cat5" for="cat5" onclick="if(this.checked){imdb(this.id)}">Batman films</label>
-            <label>
-                <input type="text" name="filterFilms" id="cat6" for="cat6" placeholder="zoek op titel" onkeydown="zoekKnop()"> 'Zoek' met overbodige "knop"
-                //* <button type="submit" name="filterFilms" searchEnter="searchEnter()">Zoek</button>
-                *//
-            </label>
-</nav>
 
+        <nav id="filters" class="filter">
+            <!-- onclick="if(this.checked){imdb(this.id)}"   -->
+            <label><input type="radio" name="filterFilms" value="allmovies" id="cat0" for="cat0">Alle films</label>
+            <label><input type="radio" name="filterFilms" value="recentmovies" id="cat1" for="cat1">Nieuwste films</label>
+            <label><input type="radio" name="filterFilms" id="cat2" for="cat2" value="avengers">Avengers films</label>
+            <label><input type="radio" name="filterFilms" id="cat3" for="cat3" value="x-men">X-Men films</label>
+            <label><input type="radio" name="filterFilms" id="cat4" for="cat4" value="princess">Princess films</label>
+            <label><input type="radio" name="filterFilms" id="cat5" for="cat5" value="batman">Batman films</label>
+            <label>
+                <input type="text" name="filterFilms" id="cat6" for="cat6" placeholder="zoek op titel" onkeydown="zoekKnop()">
+            </label>
+        </nav>
+    </header>
     <main>
         <!--//*output div id="nN" style,display block//-->
-        <div id="films"></div>
+        <div id="films mDB"></div>
+        <div id="nope"><a href="#"><=(report link if content is missing) <br>Probeer een Hoofdletter of ander woord, of gewoon pech, en geen Film info gevonden ;-)</a></div>
+        <ul id="mDB"></ul>
     </main>
+
     <footer>
-    Film gevonden anders, zo niet dan zie je dit.. alvast veel plezier met de film ;D en tot de volgende keer
+        <h4>
+
+            alvast veel plezier met de film ;D <br>
+            en tot de volgende keer..
+        </h4>
     </footer>
 </body>
 </html>

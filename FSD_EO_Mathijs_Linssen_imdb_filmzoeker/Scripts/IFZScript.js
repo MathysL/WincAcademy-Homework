@@ -1,37 +1,68 @@
 // JavaScript source code
-
-//DOM output
-Movies.forEach(function (movie, index) {
-    //ini elementen in 1 lege div "films"..voor indexpagina
+//tst selector 2 dom
+function selectBtn(movies) { 
+//+selector radiobtns
+    const selectorBtnFilms = document.getElementsByName("filterFilms");
+    //
+selectorBtnFilms.forEach((radiobtn) => {
+    radiobtn.addEventListener("change", (e) => {
+        console.log(e.target.value);
+        console.log(e.target.name);
+        handleOnChangeEvent();
+    });
+}); }
+//const imdbList= filmlijst;
+// Dom output
+const outputList= Movies.forEach(function (movie, index) {
+    // do ini elementen in 1 lege div "films"..voor indexpagina
+    const divmovie = document.createElement("div");
+    const posterLink = document.createElement("a");
     const divFilms = document.getElementById("films");
     //output
-    const divmovie = document.createElement("div");
     const posterPlaatje = document.createElement("img");
-    const posterLink = document.createElement("a");
     //output naar html
     divmovie.id = index;
     posterPlaatje.src = movie.Poster;
-    posterPlaatje.height = 440;
+    posterPlaatje.height=440;
     // (werkt niet op hele title) moet id zijn (of iets via tabel cell 4 andere versie)
     posterLink.href = "https://www.imdb.com/title/" + movie.imdbID;
     posterLink.target = "_blank";
     divmovie.innerHTML = movie.Title;
     //set and forget uitvoering
-    divFilms.appendChild(divmovie);
-    posterLink.appendChild(posterPlaatje);
+    mDB.appendChild(divmovie);
     divmovie.appendChild(posterLink);
+    posterLink.appendChild(posterPlaatje);
 });
 //FUNCTIES
-//reset
+// reset search
+function reset() {
+    document.getElementById('nope').innerHTML = '';
+    const movieList = document.getElementById('mDB');
+    let clrScreen = movieList.lastElementChild;
+    while (clrScreen) {
+        movieList.removeChild(clrScreen);
+        clrScreen = movieList.lastElementChild;
+    }
+}
+
+//reset 2
 const reset = () => {
     Movies.forEach(function (movie, index) {
         document.getElementById(index).style.display = "block";
     })
 }
 //zoeken op titel (met een Hoofdletter)
-const zoek = (zoekwoord) => {
-    Movies.forEach(function (movie, index) {
-        const substring = zoekwoord;
+// String filterTxt = "MEAN Stack stands for MongoDB, Express, Angular, and Node";
+// start with, filterTxt.matches("(?i)mean.*"); // true
+// ends with, filterTxt.matches("(?i).*node"); // true
+// anywhere, filterTxt.matches("(?i).*mongo.*"); // true
+//
+// onclick="if(this.checked){imdb(this.id)}"
+
+const zoek = (waarde) => {
+
+    movies.forEach(function (movie, index) {
+        const substring = waarde;
         if (movie.Title.includes(substring)) {
         }
         else {
@@ -66,7 +97,7 @@ function imdb(checked) {
             reset();
             Movies.forEach(function (movie, index) {
                 const jaar = parseInt(movie.Year)
-                if (movie.Year < 2016 || jaar < 2016) {
+                if (movie.Year < 2014) {
                     document.getElementById(index).style.display = "none";
                 }
             })
@@ -92,7 +123,7 @@ function imdb(checked) {
             zoek("Batman");
             break;
         default:
-            ;
+          console.log("Default: geen resultaat ") ;
             break;
     }
 }

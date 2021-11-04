@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Film zoeker v1.3</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="movies.js"></script>
+    <script defer type="text/javascript" src="script.js"></script>
+</head>
+
+
+<body>
+    <header><h2>Welkom </h2></header>
+    <nav>
+
+        <input type="radio" id="allmovies" name="moviefilters" value="allmovies">
+        <label for="allmovies">Alle films</label>
+
+        <input type="radio" id="recentmovies" name="moviefilters" value="recentmovies">
+        <label for="recentmovies">Laatste films, 2014 of nieuwer</label>
+
+        <input type="radio" id="avenger" name="moviefilters" value="avenger">
+        <label for="avenger">Avenger Films</label>
+
+        <input type="radio" id="xmen" name="moviefilters" value="x-Men">
+        <label for="xmen">X-Men Films</label>
+
+        <input type="radio" id="princess" name="moviefilters" value="princess">
+        <label for="recentmovies">Princess Films</label>
+
+        <input type="radio" id="batman" name="moviefilters" value="batman">
+        <label for="recentmovies">Batman</label>
+
+    </nav>
+    <input type="text" placeholder="Voer een genre in (avenger, x-Men, princess, batman)" id="textfield" onkeydown="zoekKnop()">
+
+    <main>
+        <div id="nope"></div>
+        <ul id="films">
+        </ul>
+    </main>
+
+</body>
+</html>
