@@ -18,8 +18,3 @@ const myFunction = function (vak, callback) {
     }, 10000);
 };
 myFunction('Wiskunde', klaarMetHuiswerk);
-//function alertFunc() {
-  //  mainVar = setTimeout(huiswerkMaken, 3000);
-  //  myVar = setTimeout(alertFunc, 3000);
-//    alert("Hallo zijn we er klaar voor.. al 3sec wortels geshoten");}
-
