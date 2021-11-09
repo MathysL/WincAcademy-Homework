@@ -50,18 +50,15 @@ const sortWords = words => {
         }
     });
 };
-
-const theseAreWords = ['try', 'makeAllCaps', 'prac(?)tice', 'sortWords', 'theseAreNotWords'];
-
 //.then() is triggered when fetch gets a successful response from the server. 
 //.catch() is triggered when something went wrong with the request.
+const theseAreWords = ["cucumber", "tomato", "zucchini", "avocado", "orange"];
 makeAllCaps(theseAreWords)
     .then(sortWords(theseAreWords))
     .then(result => console.log(result))
     .catch(error => console.log(error));
 
-const theseAreNotWords = [1, 'hello', 9];
-
+const theseAreNotWords = ["cucumber", 44, true,]
 makeAllCaps(theseAreNotWords)
     .then(sortWords(theseAreNotWords))
     .then(result => console.log(result))
