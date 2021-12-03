@@ -1,11 +1,8 @@
 ﻿<!doctype html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>TMDb Template</title>
     <meta name="description" content="A simple HTML5 Template for new projects.">
     <meta name="Mathijs Linssen" content="TMDb-API">
     <meta Content-Type='Application/json'>
@@ -14,6 +11,7 @@
     <meta property="og:url" content="https://github.com/MathysL/WincAcademy-Homework/blob/316146fb7594e4f3ac92f4f25df5f46187ea347e/themoviedbAPI/index.html">
     <meta property="og:description" content="A simple HTML5 Template for new projects.">
     <meta property="og:image" content="image.png">
+    <title>TMDb Template V1</title>
     <!--
         <link rel="icon" href="/favicon.ico">
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -22,15 +20,58 @@
 
         <script defer src="Script/Script.js"></script>
     -->
+    <script defer src="api-client.js"></script>
 </head>
 <body>
-    <header></header>
+    <header>welcome ..i m the header</header>
     <nav>
         <a href="https://github.com/MathysL/WincAcademy-Homework/blob/316146fb7594e4f3ac92f4f25df5f46187ea347e/themoviedbAPI/index.html">home</a>
     </nav>
+    <header>
+        <img src="blue_TMDb_logo.svg" :alt="no blue logo" />
+        <nav>
+            <h1>movie Genres (List)</h1>
+            <ul id="themovieGenresList"></ul>
+            <label for="movieGenresList">
+                <mGL class="text1" id="movieGenresList">Genre: name /TMDb_Id <span id='spanner1'>movie</span></mGL>
+            </label>
 
-    <!-- your content here... -->
-    <script src="api-client.js"></script>
+            <h1>My-Top-Movie</h1>
+            <p id="myTopMovie">
+                <label for="myTopMovie">
+                    <tRm class="text2" id="myTopMovie">my topRated <span id='spanner2'>movie is ; </span></tRm>
+                </label>
+            </p>
+
+            <h1>Top Rated Movies</h1>
+            <ul id="thetopRated"></ul>
+            <label for="topRatedMovies">
+                <TopRatedMovies class="text3" id="topRated"></TopRatedMovies>Top Rated <span>movie</span>
+            </label>
+// del
+            <label for="TopRatedAction">
+                <text class="text4" id="topRatedAction">Top Rated Action <span>movie</span></text>
+            </label>
+        //getMovieById
+        <h1>Top Rated Movies from year X</h1>
+        <input type="text" id="topRatedFromYearInput" /><button onchange="getTopRatedMoviesFromYearX()" id="topRatedFromYearButton">Search</button>
+        <ul id="topRatedFromYear"></ul>
+
+        <h1>Top Rated Movies in genre X</h1>
+        <input type="text" id="topInGenreInput" /><button onkeydown="getTopRatedMoviesInGenreId()" id="topInGenreButton">Search</button>
+        <ul id="topInGenre"></ul>
+        </nav>
+        <div class="TMDbOutput" style:"flex-basis">placeholders</div>
+    </header>
+
+  
+    <!-- your content here...
+    check Script if 2 scripts fail
+    -->
+    <footer>
+        FYI,the source code of this app <a href="https://github.com/MathysL/WincAcademy-Homework/blob/316146fb7594e4f3ac92f4f25df5f46187ea347e/themoviedbAPI/index.html">home</a>
+        all images and movie matirial is hosted and linked of the source: TMDb.org, special thanks TMDb for the base data;-)
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
